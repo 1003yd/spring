@@ -24,7 +24,8 @@ import org.springframework.web.servlet.ModelAndView;
 import kr.or.ddit.user.model.UserVo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:kr/or/ddit/config/spring/servlet-context.xml" })
+@ContextConfiguration(locations = { "classpath:kr/or/ddit/config/spring/servlet-context.xml" 
+									,"classpath:kr/or/ddit/config/spring/root-context.xml"})
 @WebAppConfiguration
 public class HelloControllerTest {
 

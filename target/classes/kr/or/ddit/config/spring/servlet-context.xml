@@ -6,23 +6,35 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
-	
+
 	<!-- 하는 역할이 많아 대표적인게 @Request에 대하여 처리를 해준다. -->
-	<mvc:annotation-driven/>
-	<!-- 스프링에서 처리  불가능한 리소스를 was의 default servlet으로 전달. -->
-	<mvc:default-servlet-handler/>
-	
-	<context:annotation-config/>
-	
-	<context:component-scan base-package="kr.or.ddit" use-default-filters="false">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	<mvc:annotation-driven />
+	<!-- 스프링에서 처리 불가능한 리소스를 was의 default servlet으로 전달. -->
+	<mvc:default-servlet-handler />
+
+	<context:annotation-config />
+
+	<context:component-scan
+		base-package="kr.or.ddit" use-default-filters="false">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
-	
-	
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/view/"/>
-		<property name="suffix" value=".jsp"/>
+
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
 		<!-- hello : /WEB-INF/view/hello.jsp -->
 	</bean>
+
+	<!-- mutipartResolver 설정 해당 설정이 없으면 fileupload가 불가능하다.
+		bean id="multipartResolver" 이 부분은 정해져있는거야 절대 틀리면 안돼!!
+	 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="25000000"/>
+	</bean>
+
+
 
 </beans>

@@ -10,6 +10,14 @@
 	<properties>
 		<java.version>1.7</java.version>
 	</properties>
+	
+	<repositories>
+		<!-- ojdbc6 설정시 -->
+		<repository>
+			<id>codelds</id>
+			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -92,8 +100,30 @@
 		</dependency>
 
 
+		<!-- multipart 설정으 위한 apache commons fileUpload lib -->
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.6</version>
+		</dependency>
 
-
+			<!-- ojdbc -->
+			<!-- 이것만 추가헀을 때 에러발행 : central에서 제공하지 않아 에러가 발생하게 되는 것
+				해결책 : 위에 보면 repository를 추가 해서 사용하면 된다.
+			 -->
+		 <dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>12.1.0.2</version>
+		</dependency>
 
 	</dependencies>
 
