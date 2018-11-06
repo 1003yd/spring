@@ -17,23 +17,13 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.or.ddit.test.ControllerTestConfig;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:kr/or/ddit/config/spring/servlet-context.xml"
 									,  "classpath:kr/or/ddit/config/spring/root-context.xml"})
 @WebAppConfiguration // Spring 컨테이너를 web 기반 컨테이너로 생성
-public class UserControllerTest {
-
-	@Autowired
-	private WebApplicationContext ctx;
-
-	private MockMvc mockMvc;
-
-	// Test 메소드 시작전 준비작업을 실행하는 메서드
-	@Before
-	public void setup() {
-		mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
-
-	}
+public class UserControllerTest extends ControllerTestConfig {
 
 	@Test
 	public void loginViewTest() throws Exception {

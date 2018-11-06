@@ -21,6 +21,7 @@ import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.or.ddit.hello.HelloControllerTest;
+import kr.or.ddit.test.ControllerTestConfig;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,19 +29,10 @@ import kr.or.ddit.hello.HelloControllerTest;
 									,"classpath:kr/or/ddit/config/spring/root-context.xml"})
 
 @WebAppConfiguration
-public class MvcControllerTest {
+public class MvcControllerTest extends ControllerTestConfig {
 	
 	  private Logger logger = LoggerFactory.getLogger(MvcControllerTest.class); 
 	   
-	   @Autowired
-	   private WebApplicationContext ctx;   // spring ioc 컨테이너
-	   
-	   private MockMvc mockMvc;         // dispatcher servlet(front controller역할)
-
-	   @Before
-	   public void serup() {
-	      mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
-	   }
 	   
 	   @Test
 	   public void MvcControllerTest() throws Exception {

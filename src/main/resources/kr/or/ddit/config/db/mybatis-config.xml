@@ -7,8 +7,9 @@
 	
 	<typeAliases>
 		<typeAlias type="kr.or.ddit.file.model.FileVo" alias="fileVo"/>
-	<!-- 	<typeAlias type="kr.or.ddit.util.model.PageVO" alias="pageVo"/>
-		<typeAlias type="kr.or.ddit.prod.model.ProdAllVo" alias="prodAllVo"/>
+		<typeAlias type="kr.or.ddit.user.model.UserVo" alias="userVo"/>
+		<typeAlias type="kr.or.ddit.util.model.PageVO" alias="pageVo"/>
+	<!-- 	<typeAlias type="kr.or.ddit.prod.model.ProdAllVo" alias="prodAllVo"/>
 		<typeAlias type="kr.or.ddit.prod.model.ProdDetailVo" alias="prodDetailVo"/> -->
 	</typeAliases>
 	
@@ -29,5 +30,6 @@
 	<mappers>
 		<!-- 실제 쿼리문을 작성하는 xml이 발생할 때마다 등록해줘야 한다. 까먹으면 안돼!! -->
 		<mapper resource="kr/or/ddit/config/db/file.xml" />
+		<mapper resource="kr/or/ddit/config/db/user.xml" />
 	</mappers>
 </configuration>

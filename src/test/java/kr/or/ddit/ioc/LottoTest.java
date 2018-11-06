@@ -13,14 +13,18 @@ public class LottoTest {
 		Lotto lotto = new Lotto();
 		lotto.setBallNum(45);
 		lotto.setRaffleBall(45);
-		
+
 		int[] raffleNum = lotto.excute();
-		
-		for(int number : raffleNum) {
-			System.out.print(number+"\t");
+
+		for (int number : raffleNum) {
+			System.out.print(number + "\t");
 		}
-		
+
 		assertEquals(7, raffleNum.length);
 	}
 
+	/*@Test
+	public void test() {
+		assertTrue(true);
+	}*/
 }
