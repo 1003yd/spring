@@ -3,6 +3,7 @@ package kr.or.ddit.test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +15,15 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-
 //service, dao에 대한 설정 파일만 필요하다
-@ContextConfiguration(locations = {"classpath:kr/or/ddit/config/spring/root-context.xml"})
+@ContextConfiguration(locations = { "classpath:kr/or/ddit/config/spring/root-context.xml"})
+@WebAppConfiguration
 public class ServiceDaoTestConfig {
-	
+
+	@Ignore
 	@Test
 	public void test() {
-	
+
 	}
 
 }

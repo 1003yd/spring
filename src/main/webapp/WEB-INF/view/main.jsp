@@ -3,16 +3,16 @@
 	pageEncoding="UTF-8"%>
 
 <head>
-<%@ include file="/common/basicLib.jsp" %>
+<%@ include file="/WEB-INF/view/common/basicLib.jsp" %>
 
 </head>
 
 <body>
-<%@ include file="/common/header.jsp" %>
+<%@ include file="/WEB-INF/view/common/header.jsp" %>
 	<div class="container-fluid">
 		<div class="row">
 			<%-- left --%>
-			<%@ include file="/common/left.jsp" %>
+			<%@ include file="/WEB-INF/view/common/left.jsp" %>
 			
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 

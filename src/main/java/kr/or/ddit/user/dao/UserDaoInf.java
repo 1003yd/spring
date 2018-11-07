@@ -1,8 +1,10 @@
 package kr.or.ddit.user.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import kr.or.ddit.user.model.UserVo;
+import kr.or.ddit.util.model.PageVO;
 
 public interface UserDaoInf {
 
@@ -51,6 +53,16 @@ public interface UserDaoInf {
 	* Method 설명 :  사용자 정보 수정
 	*/
 	public int updateUser(UserVo userVo);
+	
+	/**  
+	* Method   : selectUserPageList 
+	* 작성자 : 1003yd 
+	* 변경이력 :  
+	* @param page
+	* @return  
+	* Method 설명 :  사용자 페이징 조회
+	*/
+	public List<UserVo> selectUserPageList(PageVO page);
 
 	
 	

@@ -10,7 +10,7 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Signin Template for Bootstrap</title>
-    <%@ include file="/common/basicLib.jsp" %>
+    <%@ include file="/WEB-INF/view/common/basicLib.jsp" %>
 	<script type="text/javascript">
     	//$ define에러가 나면 jquert 라이브러리가 설정이 안되어있다는 뜻!! 라이브러리 추가해줘!!
 		 $(document).ready(function(){

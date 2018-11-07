@@ -56,6 +56,7 @@ public class UserDao implements UserDaoInf {
 
 	}
 	
+	@Override
 	public List<UserVo> selectUserPageList(PageVO page){
 		SqlSessionFactory factory = SqlFactoryBuilder.getSqlSessionFactory();
 		SqlSession session = factory.openSession();
